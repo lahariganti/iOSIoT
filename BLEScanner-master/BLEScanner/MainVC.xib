@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVC" customModule="BLEScanner" customModuleProvider="target">
+            <connections>
+                <outlet property="segmentedControl" destination="1Hd-nN-M2N" id="hbu-Nn-KEV"/>
+                <outlet property="textView" destination="mCB-jB-NtR" id="dkT-kG-bbF"/>
+                <outlet property="valueLabel" destination="A59-dx-S1h" id="ro7-cL-vIF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1Hd-nN-M2N">
+                    <rect key="frame" x="16" y="36" width="288" height="29"/>
+                    <segments>
+                        <segment title="Devices"/>
+                        <segment title="Devices &amp; Services"/>
+                    </segments>
+                </segmentedControl>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mCB-jB-NtR">
+                    <rect key="frame" x="16" y="96" width="288" height="418.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="R8Q-iw-gm6">
+                    <rect key="frame" x="16" y="530.5" width="288" height="21.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtK-fL-eBC">
+                            <rect key="frame" x="0.0" y="0.0" width="124.5" height="21.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A59-dx-S1h">
+                            <rect key="frame" x="184.5" y="0.0" width="103.5" height="21.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="R8Q-iw-gm6" firstAttribute="top" secondItem="mCB-jB-NtR" secondAttribute="bottom" constant="16" id="1PP-oX-gya"/>
+                <constraint firstItem="1Hd-nN-M2N" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="BXW-fb-RI7"/>
+                <constraint firstItem="mCB-jB-NtR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="CFF-xI-6BE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mCB-jB-NtR" secondAttribute="trailing" constant="16" id="Fat-Qj-vLg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="R8Q-iw-gm6" secondAttribute="bottom" constant="16" id="GzF-XF-fjL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="R8Q-iw-gm6" secondAttribute="trailing" constant="16" id="Jvj-h3-Vwv"/>
+                <constraint firstItem="R8Q-iw-gm6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="OEB-wz-eDR"/>
+                <constraint firstItem="mCB-jB-NtR" firstAttribute="top" secondItem="1Hd-nN-M2N" secondAttribute="bottom" constant="32" id="OcV-kR-Wc8"/>
+                <constraint firstItem="1Hd-nN-M2N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="PH6-2t-fTM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1Hd-nN-M2N" secondAttribute="trailing" constant="16" id="T6I-7H-y8I"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.25" y="143.75"/>
+        </view>
+    </objects>
+</document>
